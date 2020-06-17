@@ -1,0 +1,80 @@
+
+
+// ヘッダー部分の装飾
+
+.header {
+  height: 100px;
+  line-height: 100px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: deepskyblue;
+  .header-title {
+    font-size: 48px;
+    .title-name {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .header-sub {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    .log-in,
+    .new-menu {
+      font-size: 24px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+// post.index
+
+.wrapper {
+  .main-contents {
+    width: 60%;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    background-color: burlywood;
+    .search {
+      height: 50px;
+      background-color: cadetblue;
+    }
+  }
+  .content-main {
+
+    &__box {
+      height: 300px;
+      background-color: chartreuse;
+      h1 {
+        text-align: center;
+
+      }
+      &__post {
+        background-color: coral;
+        display: flex;
+        overflow: scroll;
+        &__box {
+          width: 200px;
+          height: 200px;
+          border: 1px solid #c9c6c6;
+          margin: 25px;
+          background-color: cyan;
+          position: relative;
+          &--img {
+            width: 200px;
+            height: 200px;
+          }
+          &--title {
+            position: absolute;
+            left: 3px;
+            bottom: 3px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
