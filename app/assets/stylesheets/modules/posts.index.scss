@@ -8,23 +8,24 @@
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
-  background-color: deepskyblue;
+  background-color: #f8e7e1;
+  color: #333;
   .header-title {
+    min-width: 240px;
     font-size: 48px;
     .title-name {
       text-decoration: none;
-      color: black;
     }
   }
   .header-sub {
     width: 400px;
+    min-width: 400px;
     display: flex;
     justify-content: space-evenly;
     .log-in,
     .new-menu {
       font-size: 24px;
       text-decoration: none;
-      color: black;
     }
   }
 }
@@ -32,39 +33,62 @@
 // post.index
 
 .wrapper {
+  background-image: url('baby_background.png');
+  background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten;
+  background-size: cover;
   .main-contents {
     width: 60%;
+    min-width: 400px;
     height: calc(100vh - 100px);
     margin: 0 auto;
-    background-color: burlywood;
+    background-color: #ffecf6;
     .search {
-      height: 50px;
-      background-color: cadetblue;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      &__form {
+        height: 30px;
+        width: 600px;
+        border: 1px solid #858484;
+      }
+      &__btn {
+        height: 30px;
+        width: 50px;
+        min-width: 50px;
+        border: 1px solid #858484;
+      }
     }
   }
   .content-main {
-
+    // min-width: 400px;
+    
     &__box {
-      height: 300px;
-      background-color: chartreuse;
+      // height: 300px;
       h1 {
         text-align: center;
-
+        padding-top: 10px;
       }
       &__post {
-        background-color: coral;
         display: flex;
-        overflow: scroll;
+        overflow-x: scroll;
         &__box {
-          width: 200px;
-          height: 200px;
+          // width: 250px;
+          // height: 250px;
           border: 1px solid #c9c6c6;
-          margin: 25px;
-          background-color: cyan;
+          margin: 15px 10px;
           position: relative;
           &--img {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              background-color: #fff;
+            }
           }
           &--title {
             position: absolute;
