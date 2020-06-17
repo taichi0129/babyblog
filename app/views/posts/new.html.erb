@@ -9,6 +9,7 @@
       <%= f.text_area :text, placeholder: "コメントを入力してください（500文字以内）", rows: 5, class: "text-form" %>
       <h2 class="post-image">写真を貼り付けましょう</h2>
       <%= f.file_field :image, class: "image-form" %>
+      <%= f.submit "送信" %>
     <% end %>
   </div>
 </div>
