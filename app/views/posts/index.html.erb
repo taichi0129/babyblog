@@ -1,11 +1,15 @@
 <div class="wrapper">
   <div class="main-contents">
+
     <div class="search">
-      <div class="search__form"></div>
-      <div class="search__btn"></div>
+      <%= form_for "#" do |f| %>
+        <%= f.text_field :keyword, class: "search__form" %>
+        <%= f.submit "検索", class: "search__btn" %>
+      <% end %>
     </div>
 
     <div class="content-main">
+
       <div class="content-main__box">
         <h1>新着投稿</h1>
         <div class="content-main__box__post">
@@ -21,6 +25,7 @@
           <% end %>
         </div>
       </div>
+      
       <div class="content-main__box">
         <h1>タグ１の新着</h1>
         <div class="content-main__box__post">
