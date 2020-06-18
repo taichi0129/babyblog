@@ -1,15 +1,22 @@
 <div class="wrapper">
   <div class="main-contents">
+
     <div class="search">
+      <%= form_for "#" do |f| %>
+        <%= f.text_field :keyword, class: "search__form" %>
+        <%= f.submit "検索", class: "search__btn" %>
+      <% end %>
     </div>
+
     <div class="content-main">
+
       <div class="content-main__box">
         <h1>新着投稿</h1>
         <div class="content-main__box__post">
           <% @posts.each do |post| %>
             <div class="content-main__box__post__box">
               <div class="content-main__box__post__box--img">
-                <%= link_to "", "#" %>
+                <%= link_to image_tag(post.image.to_s), "#" %>
               </div>
               <span class="content-main__box__post__box--title">
                 <%= post.title %>
@@ -18,6 +25,7 @@
           <% end %>
         </div>
       </div>
+      
       <div class="content-main__box">
         <h1>タグ１の新着</h1>
         <div class="content-main__box__post">
