@@ -16,7 +16,7 @@
           <% @posts.each do |post| %>
             <div class="content-main__box__post__box">
               <div class="content-main__box__post__box--img">
-                <%= link_to image_tag(post.image.to_s), "#" %>
+                <%= link_to image_tag(post.image.to_s), post_path(post.id) %>
               </div>
               <span class="content-main__box__post__box--title">
                 <%= post.title %>

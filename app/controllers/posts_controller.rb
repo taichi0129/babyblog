@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
   def index
     @posts = Post.includes(:user)
   end
@@ -12,26 +14,35 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
-      render "new"
+      render :new
     end
   end
 
-  # def show
-  #   @post = Post.find(params[:id])
-  # end
+  def show
+  end
 
-  # def edit
-  #   @post = Post.find(params[:id])
-  # end
+  def edit
+  end
 
-  # def update
-  # end
+  def update
+    @post.update(post_params)
+    redirect_to post_path(@post.id)
+  end
 
-  # def destroy
-  # end
+  def destroy
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
 
   private
   def post_params
     params.require(:post).permit(:title, :text, :image).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
