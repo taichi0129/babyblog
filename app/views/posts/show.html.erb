@@ -3,6 +3,11 @@
     <h1 class="main-contents__title">
       <%= @post.title %>
     </h1>
+    <div class="main-comtents__tag">
+      <% @post.tags.each do |tag| %>
+        <%= tag.name %>
+      <% end %>
+    </div>
     <div class="main-contents__img">
       <%= image_tag(@post.image.to_s) %>
     </div>
