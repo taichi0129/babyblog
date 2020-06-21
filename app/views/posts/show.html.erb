@@ -3,7 +3,7 @@
     <h1 class="main-contents__title">
       <%= @post.title %>
     </h1>
-    <div class="main-comtents__tag">
+    <div class="main-contents__tag">
       <% @post.tags.each do |tag| %>
         <%= tag.name %>
       <% end %>
@@ -14,16 +14,16 @@
     <div class="main-contents__text">
       <%= @post.text %>
     </div>
-    <% if user_signed_in? && @post.user_id == current_user.id %>
-      <div class="edit-box">
+    <div class="main-contents__option">
+      <% if user_signed_in? && @post.user_id == current_user.id %>
         <div class="edit">
           <%= link_to "投稿を編集する", edit_post_path(@post.id) %>
         </div>
         <div class="destroy">
           <%= link_to "投稿を削除する", post_path(@post.id), method: :delete %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
     <div class="post-comment">
       <% if current_user %>
         <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |f| %>
