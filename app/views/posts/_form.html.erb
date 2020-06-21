@@ -1,11 +1,17 @@
 <div class="form-box">
   <h2 class="post-title">タイトル</h2>
   <%= f.text_field :title, placeholder: "タイトルを入力してください（20文字以内）", class: "title-form" %>
-  <h2 class="post-tag">タグ</h2>
-  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+  <div class="post-tag">
+    <h2>タグ（複数選択可）</h2>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) %>
+  </div>
   <h2 class="post-text">コメント</h2>
-  <%= f.text_area :text, placeholder: "コメントを入力してください（500文字以内）", rows: 5, class: "text-form" %>
-  <h2 class="post-image">写真を貼り付けましょう</h2>
-  <%= f.file_field :image, class: "image-form" %>
-  <%= f.submit "送信" %>
+  <%= f.text_area :text, placeholder: "コメントを入力してください（500文字以内）", rows: 8, class: "text-form" %>
+  <div class="post-image">
+    <h2>写真を貼り付けましょう</h2>
+    <%= f.file_field :image, class: "image-form" %>
+  </div>
+  <div class=post-submit>
+    <%= f.submit "送信", class: "post-submit__btn" %>
+  </div>
 </div>
