@@ -14,8 +14,9 @@
     <div class="main-contents__text">
       <%= @post.text %>
     </div>
-    <div class="main-contents__like" data-like-id="<%= @post.id %>">
+    <div id="like_<%= @post.id %>">
       <%= render "likes/like" %>
+    </div>
     <div class="main-contents__option">
       <% if user_signed_in? && @post.user_id == current_user.id %>
         <div class="edit">
