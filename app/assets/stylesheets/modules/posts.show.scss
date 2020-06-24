@@ -13,6 +13,16 @@
 .main-contents__tag {
   padding: 10px;
   font-size: 20px;
+  display: flex;
+  .tag-name {
+    font-size: 16px;
+    background-color: #3a83f0;
+    color: #fff;
+    padding: 3px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
 }
 
 .main-contents__img {
