@@ -12,6 +12,7 @@
 
       <div class="content-main__box">
         <h1>新着投稿</h1>
+
         <div class="content-main__box__post">
           <% @posts.each do |post| %>
             <div class="content-main__box__post__box">
@@ -24,23 +25,8 @@
             </div>
           <% end %>
         </div>
+        
       </div>
-      
-      <div class="content-main__box">
-        <h1>タグ１の新着</h1>
-        <div class="content-main__box__post">
-          <div class="content-main__box__post__box">
-            <div class="content-main__box__post__box--img">
-              <%= link_to "", "#" %>
-            </div>
-            <span class="content-main__box__post__box--title">
-            sample
-            </span>
-          </div>
-        </div>
-      </div>
-      <%# 残りは新着投稿の箇所がうまく出来たらコピペしていく %>
-
     </div>
   </div>
 </div>

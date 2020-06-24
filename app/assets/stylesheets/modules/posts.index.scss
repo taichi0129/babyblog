@@ -1,30 +1,28 @@
-
-
 // ヘッダー部分の装飾
-
 .header {
-  height: 100px;
-  line-height: 100px;
-  padding: 0 50px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 200px;
   display: flex;
   justify-content: space-between;
-  background-color: #f8e7e1;
-  color: #333;
+  background-color: #ffeee7;
+  color: #555555;
+  box-shadow: 0 0 10px #333333;
   .header-title {
     min-width: 240px;
-    font-size: 48px;
+    font-size: 36px;
     .title-name {
       text-decoration: none;
     }
   }
   .header-sub {
-    width: 400px;
-    min-width: 400px;
+    width: 300px;
+    min-width: 300px;
     display: flex;
     justify-content: space-evenly;
     .log-in,
     .new-menu {
-      font-size: 24px;
+      font-size: 18px;
       text-decoration: none;
     }
   }
@@ -34,16 +32,18 @@
 
 .wrapper {
   background-image: url('baby_background.png');
-  background-color:rgba(255,255,255,0.7);
+  background-color:rgba(255,255,255,0.8);
   background-blend-mode:lighten;
   // background-size: 100%;
-  height: calc(100vh - 100px);
+  // height: calc(100vh - 100px);
+  padding-top: 50px;
   .main-contents {
     max-width: 1000px;
     min-width: 300px;
     // height: calc(100vh - 100px);
     margin: 0 auto;
-    background-color: #fcf5f9;
+    background-color: #ffffff;
+    @include box-shadow;
     .search {
       height: 60px;
       display: flex;
@@ -74,16 +74,18 @@
         }
         &__post {
           display: flex;
-          overflow-x: scroll;
+          flex-wrap: wrap;
+          padding: 0 50px;
           &__box {
             // width: 250px;
             // height: 250px;
-            border: 1px solid #c9c6c6;
-            margin: 15px;
+            @include box-shadow;
+            margin: 24px;
             position: relative;
             &--img {
-              width: 250px;
-              height: 250px;
+              width: 400px;
+              height: 300px;
+              
               img {
                 width: 100%;
                 height: 100%;
