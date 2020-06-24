@@ -1,6 +1,11 @@
 <div class="wrapper">
   <div class="main-contents">
     <h1 class="main-contents__user">
+      <% if @post.user.image? %>
+        <%= image_tag(@post.user.image.to_s) %>
+      <% else %>
+        <%= image_tag "/assets/default.png" %>
+      <% end %>
       <%= @post.user.nickname %>
       <%# <%= render 'relationships/follow_btn', user: @user %>
     </h1>
