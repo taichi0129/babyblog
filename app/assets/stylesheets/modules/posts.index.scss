@@ -57,7 +57,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 1px solid #e0e0e0;
+      @include border-bottom_line;
       &__form {
         height: 30px;
         width: 600px;

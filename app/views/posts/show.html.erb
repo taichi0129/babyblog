@@ -12,27 +12,29 @@
     </div>
     <div class="main-contents__img">
       <%= image_tag(@post.image.to_s) %>
-    </div>
-    <h1 class="main-contents__user">
-      <% if @post.user.image? %>
-        <div class="user-image">
-          <%= image_tag(@post.user.image.to_s) %>
-        </div>
-      <% else %>
-        <div class="user-image">
-          <%= image_tag "/assets/default.png" %>
-        </div>
-      <% end %>
-      <div class="user-name">
-        <%= @post.user.nickname %>
+      <div class="like" id="like_<%= @post.id %>">
+        <%= render "likes/like" %>
       </div>
-        <%# <%= render 'relationships/follow_btn', user: @user %>
-    </h1>
-    <div class="main-contents__text">
-      <%= @post.text %>
     </div>
-    <div id="like_<%= @post.id %>">
-      <%= render "likes/like" %>
+    <div class="main-contents__text">
+      <div class="post-text">
+        <%= @post.text %>
+      </div>
+      <h1 class="main-contents__user">
+        <% if @post.user.image? %>
+          <div class="user-image">
+            <%= image_tag(@post.user.image.to_s) %>
+          </div>
+        <% else %>
+          <div class="user-image">
+            <%= image_tag "/assets/default.png" %>
+          </div>
+        <% end %>
+        <div class="user-name">
+          <span>投稿者：<%= @post.user.nickname %></span>
+        </div>
+          <%# <%= render 'relationships/follow_btn', user: @user %>
+      </h1>
     </div>
     <div class="main-contents__option">
       <% if user_signed_in? && @post.user_id == current_user.id %>
@@ -44,6 +46,9 @@
         </div>
       <% end %>
     </div>
+  </div>
+
+  <div class="comment-contents">
     <div class="post-comment">
       <% if current_user %>
         <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |f| %>
@@ -57,10 +62,25 @@
         <h4>＜コメント一覧＞</h4>
         <% if @comments %>
           <% @comments.each do |comment| %>
-            <p>
-              <strong><%= comment.user.nickname %>：</strong>
-              <%= comment.comment %>
-            </p>
+            <div class="comment-box">
+              <div class="user-info">
+                <% if comment.user.image? %>
+                  <div class="user-image">
+                    <%= image_tag(comment.user.image.to_s) %>
+                  </div>
+                <% else %>
+                  <div class="user-image">
+                    <%= image_tag "/assets/default.png" %>
+                  </div>
+                <% end %>
+                <div class="user-name">
+                  <%= comment.user.nickname %>
+                </div>
+              </div>
+              <p>
+                <%= comment.comment %>
+              </p>
+            </div>
           <% end %>
         <% end %>
       </div>
