@@ -25,6 +25,12 @@
       font-size: 18px;
       text-decoration: none;
     }
+    .user-image {
+      padding-top: 6px;
+      img {
+        border-radius: 50%;
+      }
+    }
   }
 }
 
@@ -79,10 +85,9 @@
           flex-wrap: wrap;
           padding: 0 50px;
           &__box {
-            // width: 250px;
-            // height: 250px;
+            width: 400px;
+            height: 400px;
             @include box-shadow;
-            
             margin: 15px;
             position: relative;
             &--img {
@@ -95,11 +100,26 @@
                 // background-color: #fff;
               }
             }
-            &--title {
-              position: absolute;
-              left: 3px;
-              bottom: 3px;
-              font-weight: bold;
+            &--info {
+              height: 100px;
+              padding: 10px 20px;
+              border-top: 1px solid #e0e0e0;
+              .user-info {
+                display: flex;
+                .user-image {
+                  width: 40px;
+                  height: 40px;
+                  img {
+                    border-radius: 50%;
+                  }
+                }
+                .user-name {
+                  padding-left: 20px;
+                }
+              }
+              .post-title {
+                padding-top: 15px;
+              }
             }
           }
           &__box:hover {

@@ -19,13 +19,29 @@
               <div class="content-main__box__post__box--img">
                 <%= link_to image_tag(post.image.to_s), post_path(post.id) %>
               </div>
-              <span class="content-main__box__post__box--title">
-                <%= post.title %>
-              </span>
+              <div class="content-main__box__post__box--info">
+                <div class="user-info">
+                  <% if post.user.image? %>
+                    <div class="user-image">
+                      <%= image_tag(post.user.image.to_s) %>
+                    </div>
+                  <% else %>
+                    <div class="user-image">
+                      <%= image_tag "/assets/default.png" %>
+                    </div>
+                  <% end %>
+                  <div class="user-name">
+                    <%= post.user.nickname %>
+                  </div>
+                </div>
+                <div class="post-title">
+                  <%= post.title %>
+                </div>
+              </div>
             </div>
           <% end %>
         </div>
-        
+
       </div>
     </div>
   </div>

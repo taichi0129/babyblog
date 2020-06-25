@@ -18,6 +18,15 @@
         <% if user_signed_in? %>
           <%= link_to "新規投稿", new_post_path, class: "new-menu" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-in" %>
+          <% if current_user.image? %>
+            <div class="user-image">
+              <%= image_tag(current_user.image.to_s) %>
+            </div>
+          <% else %>
+            <div class="user-image">
+              <%= image_tag "/assets/default.png" %>
+            </div>
+          <% end %>
         <% else %>
           <%= link_to "新規登録", new_user_registration_path, class: "new-menu" %>
           <%= link_to "ログイン", new_user_session_path, class: "log-in" %>
