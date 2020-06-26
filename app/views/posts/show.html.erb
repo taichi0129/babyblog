@@ -52,7 +52,7 @@
     <div class="post-comment">
       <% if current_user %>
         <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |f| %>
-          <%= f.text_area :comment, placeholder: "コメントする", rows: "2", class: "comment-box" %>
+          <%= f.text_area :comment, placeholder: "コメントする", rows: "2", class: "comment-field" %>
           <%= f.submit "送信", class: "comment_submit" %>
         <% end %>
       <% else %>
