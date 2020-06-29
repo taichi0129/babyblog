@@ -31,6 +31,16 @@
     h2 {
       padding-bottom: 5px;
     }
+    .image-form {
+      .preview-image {
+        img {
+          width: 100%;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
   .post-text {
     padding: 20px 0 5px 0;
