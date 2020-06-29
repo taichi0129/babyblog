@@ -13,7 +13,7 @@
           <%= image_tag @post.image.to_s, class: "image-data" %>
         </div>
       <% end %>
-      <div class="preview-image">
+      <div class="hidden-image">
         <%= f.file_field :image, class: "hidden-file" %>
       </div>
     </div>

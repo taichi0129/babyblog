@@ -9,5 +9,9 @@ $(function() {
       $('.preview-image').after(html);
     }
     fileReader.readAsDataURL(file);
+    if ($('.preview-image').length != 0) {
+      $('.image-data').remove();
+      $('.preview-image .image-data').attr({ src: src });
+    }
   });
 });
