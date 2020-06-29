@@ -39,7 +39,7 @@
     <div class="main-contents__option">
       <% if user_signed_in? && @post.user_id == current_user.id %>
         <div class="edit">
-          <%= link_to "投稿を編集する", edit_post_path(@post.id) %>
+          <%= link_to "投稿を編集する", edit_post_path(@post.id), data: { "turbolinks":false } %>
         </div>
         <div class="destroy">
           <%= link_to "投稿を削除する", post_path(@post.id), method: :delete %>
