@@ -7,11 +7,20 @@
   </div>
   <div class="post-image">
     <h2>写真を貼り付けましょう</h2>
-    <%= f.file_field :image, class: "image-form" %>
+    <div class="image-form">
+      <% if @post.image.present? %>
+        <div class="preview-image">
+          <%= image_tag @post.image.to_s, class: "image-data" %>
+        </div>
+      <% end %>
+      <div class="preview-image">
+        <%= f.file_field :image, class: "hidden-file" %>
+      </div>
+    </div>
   </div>
   <h2 class="post-text">コメント</h2>
   <%= f.text_area :text, placeholder: "コメントを入力してください（500文字以内）", rows: 8, class: "text-form" %>
-  <div class=post-submit>
+  <div class="post-submit">
     <%= f.submit "送信", class: "post-submit__btn" %>
   </div>
 </div>
