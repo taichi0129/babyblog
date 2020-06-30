@@ -20,11 +20,11 @@
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-in" %>
           <% if current_user.image? %>
             <div class="user-image">
-              <%= image_tag(current_user.image.to_s) %>
+              <%= link_to image_tag(current_user.image.to_s), users_path %>
             </div>
           <% else %>
             <div class="user-image">
-              <%= image_tag "/assets/default.png" %>
+              <%= link_to image_tag("/assets/default.png"), users_path %>
             </div>
           <% end %>
         <% else %>

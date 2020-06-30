@@ -1,0 +1,61 @@
+<div class="users-wrapper">
+  <div class="user-wrapper">
+    <%= render "side-contents" %>
+
+    <div class="user-contents">
+      <div class="user-image">
+        <ul>
+          <li>
+            <% if @user.image? %>
+              <div class="user-image">
+                <%= image_tag(@user.image.to_s) %>
+              </div>
+            <% else %>
+              <div class="user-image">
+                <%= image_tag "/assets/default.png" %>
+              </div>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <table class="user-info">
+        <tr>ユーザー情報
+          <th>ユーザー名</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>ニックネーム</th>
+          <td><%= @user.nickname %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= @user.email %></td>
+        </tr>
+      </table>
+
+      <table class="user-info">
+        <tr>マイベビー情報
+          <th>ベビーの名前</th>
+          <td>はな</td>
+        </tr>
+        <tr>
+          <th>性別</th>
+          <td>女の子</td>
+        </tr>
+        <tr>
+          <th>データ登録日（最新）</th>
+          <td>2020/06/01</td>
+        </tr>
+        <tr>
+          <th>身長</th>
+          <td>80cm</td>
+        </tr>
+        <tr>
+          <th>体重</th>
+          <td>8kg</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
