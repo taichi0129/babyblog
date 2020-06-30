@@ -28,7 +28,8 @@
     .user-image {
       padding-top: 6px;
       img {
-        border-radius: 50%;
+        width: 48px;
+        @include user-img;
       }
     }
   }
@@ -110,7 +111,8 @@
                   width: 40px;
                   height: 40px;
                   img {
-                    border-radius: 50%;
+                    width: 48px;
+                    @include user-img;
                   }
                 }
                 .user-name {

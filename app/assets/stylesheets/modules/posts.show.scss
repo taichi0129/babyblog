@@ -66,9 +66,8 @@
     padding-top: 10px;
     display: flex;
     img {
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
+      width: 48px;
+      @include user-img;
     }
     .user-name {
       padding: 20px 0 0 10px;
@@ -167,9 +166,8 @@
     display: flex;
     // border-right: 2px solid #f1f1f1;
     img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      width: 48px;
+      @include user-img;
     }
     .user-name {
       padding: 15px 0 0 10px;
