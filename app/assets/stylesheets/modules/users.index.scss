@@ -64,6 +64,7 @@
             padding-bottom: 20px;
             img {
               width: 200px;
+              height: 200px;
               @include user-img;
             }
           }
@@ -89,14 +90,52 @@
             min-width: 350px;
             text-align: left;
             padding-left: 20px;
+          }
+          .user-edit {
+            font-size: 16px;
+            width: 100%;
+            padding: 3px 10px;
+            border: none;
 
           }
+        }
+        .user-image {
+          text-align: center;
+          img {
+            width: 200px;
+            height: 200px;
+            @include user-img;
+          }
+        }
+        .hidden_field {
+          padding-left: 180px;
+          // display: none;
         }
       }
       .baby-info {
         @include box-shadow;
         background-color: #ffffff;
       }
+      .user-update {
+        padding-top: 10px;
+        &__btn {
+          background: #f16272;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          height: 50px;
+          font-size: 1.2em;
+          letter-spacing: 0.05em;
+          text-align: center;
+          text-transform: uppercase;
+          transition: background 0.3s ease-in-out;
+          width: 100%;
+        }
+        &__btn:hover {
+          background: #ee3e52;
+        }
+      }
     }
   }
 }
+
