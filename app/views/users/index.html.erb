@@ -11,9 +11,7 @@
                 <%= image_tag(@user.image.to_s) %>
               </div>
             <% else %>
-              <div class="user-image">
-                <%= image_tag "/assets/default.png" %>
-              </div>
+              <%= render "/layouts/default_img" %>
             <% end %>
           </li>
         </ul>

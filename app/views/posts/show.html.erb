@@ -26,9 +26,7 @@
             <%= image_tag(@post.user.image.to_s) %>
           </div>
         <% else %>
-          <div class="user-image">
-            <%= image_tag "/assets/default.png" %>
-          </div>
+          <%= render "/layouts/default_img" %>
         <% end %>
         <div class="user-name">
           <span>投稿者：<%= @post.user.nickname %></span>
@@ -69,9 +67,7 @@
                     <%= image_tag(comment.user.image.to_s) %>
                   </div>
                 <% else %>
-                  <div class="user-image">
-                    <%= image_tag "/assets/default.png" %>
-                  </div>
+                  <%= render "/layouts/default_img" %>
                 <% end %>
                 <div class="user-name">
                   <%= comment.user.nickname %>
