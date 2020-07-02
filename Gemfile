@@ -78,5 +78,5 @@ gem 'jquery-ui-rails'
 gem 'rename'
 gem 'carrierwave'
 gem 'devise'
-
 gem 'font-awesome-sass', '~> 5.13.0'
+gem 'fog-aws'
