@@ -77,17 +77,31 @@
         &__form {
           height: 30px;
           width: 600px;
+          padding: 20px;
+          margin-bottom: 15px;
+          font-size: 18px;
+          border-radius: 3px;
           border: 1px solid #858484;
         }
         &__btn {
-          height: 30px;
-          width: 50px;
-          min-width: 50px;
-          border: 1px solid #858484;
+          background: #f16272;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          height: 40px;
+          font-size: 1.2em;
+          letter-spacing: 0.05em;
+          text-align: center;
+          text-transform: uppercase;
+          transition: background 0.3s ease-in-out;
+          width: 80px;
+          border-radius: 20px;
+        }
+        &__btn:hover {
+          background: #ee3e52;
         }
       }
       .content-main {
-        
         &__box {
           h1 {
             text-align: center;
@@ -225,13 +239,28 @@
         &__form {
           height: 30px;
           width: 600px;
+          padding: 20px;
+          margin-bottom: 15px;
+          font-size: 18px;
+          border-radius: 3px;
           border: 1px solid #858484;
         }
         &__btn {
-          height: 30px;
-          width: 50px;
-          min-width: 50px;
-          border: 1px solid #858484;
+          background: #f16272;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          height: 40px;
+          font-size: 1.2em;
+          letter-spacing: 0.05em;
+          text-align: center;
+          text-transform: uppercase;
+          transition: background 0.3s ease-in-out;
+          width: 80px;
+          border-radius: 20px;
+        }
+        &__btn:hover {
+          background: #ee3e52;
         }
       }
       .content-main {
