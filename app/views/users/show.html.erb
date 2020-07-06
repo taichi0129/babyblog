@@ -37,7 +37,18 @@
 
       <% @babies.each do |baby| %>
         <table class="user-info">
-          <tr>マイベビー情報
+          <div>マイベビー情報
+            <% if baby.image? %>
+              <div class="user-image">
+                <%= image_tag(baby.image.to_s) %>
+              </div>
+            <% else %>
+              <div class="user-image">
+                <%= image_tag asset_path('default_baby.png') %>
+              </div>
+            <% end %>
+          </div>
+          <tr>
             <th>ベビーの名前</th>
             <td><%= baby.name %></td>
           </tr>
