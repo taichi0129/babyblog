@@ -1,8 +1,8 @@
 @media screen and (min-width :375px) {
   .header {
-    height: 60px;
-    line-height: 60px;
-    padding: 0 200px;
+    height: 120px;
+    line-height: 120px;
+    padding: 0 70px;
     display: flex;
     justify-content: space-between;
     background-color: #ffeee7;
@@ -10,19 +10,20 @@
     box-shadow: 0 0 10px #333333;
     .header-title {
       min-width: 240px;
-      font-size: 36px;
+      font-size: 72px;
       .title-name {
         text-decoration: none;
       }
     }
     .header-sub {
-      width: 300px;
-      min-width: 300px;
+      width: 400px;
+      min-width: 400px;
       display: flex;
       justify-content: space-evenly;
       .log-in,
       .new-menu {
-        font-size: 18px;
+        font-size: 24px;
+        margin-left: 30px;
         position: relative;
         display: inline-block;
         text-decoration: none;
@@ -45,10 +46,11 @@
         transform: scale(1, 1);
       }
       .user-image {
-        padding-top: 6px;
+        padding-top: 10px;
+        margin-left: 10px;
         img {
-          width: 48px;
-          height: 48px;
+          width: 100px;
+          height: 100px;
           @include user-img;
         }
       }
@@ -69,17 +71,17 @@
       background-color: #ffffff;
       @include box-shadow;
       .search {
-        height: 60px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         @include border-bottom_line;
         &__form {
-          height: 30px;
+          height: 60px;
           width: 600px;
           padding: 20px;
           margin-bottom: 15px;
-          font-size: 18px;
+          font-size: 30px;
           border-radius: 3px;
           border: 1px solid #858484;
         }
@@ -88,14 +90,14 @@
           border: none;
           color: #fff;
           cursor: pointer;
-          height: 40px;
-          font-size: 1.2em;
+          height: 60px;
+          font-size: 24px;
           letter-spacing: 0.05em;
           text-align: center;
           text-transform: uppercase;
           transition: background 0.3s ease-in-out;
-          width: 80px;
-          border-radius: 20px;
+          width: 100px;
+          border-radius: 30px;
         }
         &__btn:hover {
           background: #ee3e52;
@@ -110,10 +112,9 @@
           &__post {
             display: flex;
             flex-wrap: wrap;
-            padding: 0 50px;
+            // padding: 0 50px;
             &__box {
               width: 100%;
-              height: 600px;
               @include box-shadow;
               margin: 15px;
               position: relative;
@@ -127,26 +128,38 @@
                 }
               }
               &--info {
-                height: 100px;
                 padding: 10px 20px;
                 border-top: 1px solid #e0e0e0;
                 .user-info {
                   display: flex;
                   .user-image {
-                    width: 40px;
-                    height: 40px;
+                    width: 100px;
+                    height: 100px;
                     img {
-                      width: 48px;
-                      height: 48px;
+                      width: 100px;
+                      height: 100px;
                       @include user-img;
                     }
                   }
                   .user-name {
+                    padding-top: 10px;
                     padding-left: 20px;
+                    span {
+                      font-size: 30px;
+                    }
+                    .post-date {
+                      font-size: 24px;
+                    }
                   }
                 }
                 .post-title {
                   padding-top: 15px;
+                  padding-bottom: 10px;
+                  @include border-bottom_line
+                }
+                .post-text {
+                  padding-top: 10px;
+                  color: #969494;
                 }
               }
             }
@@ -276,7 +289,6 @@
             padding: 0 50px;
             &__box {
               width: 400px;
-              height: 400px;
               @include box-shadow;
               margin: 15px;
               position: relative;
@@ -290,7 +302,6 @@
                 }
               }
               &--info {
-                height: 100px;
                 padding: 10px 20px;
                 border-top: 1px solid #e0e0e0;
                 .user-info {
@@ -310,6 +321,7 @@
                 }
                 .post-title {
                   padding-top: 15px;
+                  @include border-bottom_line;
                 }
               }
             }
