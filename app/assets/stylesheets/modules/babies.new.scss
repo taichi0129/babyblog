@@ -1,0 +1,73 @@
+.baby-wrapper {
+  width: 60%;
+  min-width: 950px;
+  margin: 20px auto;
+  .user-contents {
+    min-width: 600px;
+    .user-info {
+      display: block;
+      @include box-shadow;
+      background-color: #ffffff;
+      padding: 20px 50px;
+      margin-bottom: 20px;
+      tr {
+        display: block;
+        height: 70px;
+        line-height: 90px;
+        @include border-bottom_line;
+        th {
+          width: 300px;
+          min-width: 200px;
+          text-align: left;
+          padding-left: 40px;
+        }
+        td {
+          width: 500px;
+          min-width: 350px;
+          text-align: left;
+          padding-left: 20px;
+        }
+        .user-edit {
+          font-size: 16px;
+          width: 100%;
+          padding: 3px 10px;
+          border: none;
+
+        }
+      }
+      .user-image {
+        text-align: center;
+        img {
+          width: 400px;
+          height: 400px;
+          @include user-img;
+        }
+      }
+      .hidden_field {
+        padding-left: 350px;
+        // display: none;
+      }
+    }
+    .user-update {
+      padding-top: 10px;
+      &__btn {
+        background: #f16272;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        height: 50px;
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background 0.3s ease-in-out;
+        width: 100%;
+      }
+      &__btn:hover {
+        background: #ee3e52;
+      }
+    }
+  }
+}
+
+
