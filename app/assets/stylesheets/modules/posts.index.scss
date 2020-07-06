@@ -71,17 +71,17 @@
       background-color: #ffffff;
       @include box-shadow;
       .search {
-        height: 60px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         @include border-bottom_line;
         &__form {
-          height: 30px;
+          height: 60px;
           width: 600px;
           padding: 20px;
           margin-bottom: 15px;
-          font-size: 18px;
+          font-size: 30px;
           border-radius: 3px;
           border: 1px solid #858484;
         }
@@ -90,14 +90,14 @@
           border: none;
           color: #fff;
           cursor: pointer;
-          height: 40px;
-          font-size: 1.2em;
+          height: 60px;
+          font-size: 24px;
           letter-spacing: 0.05em;
           text-align: center;
           text-transform: uppercase;
           transition: background 0.3s ease-in-out;
-          width: 80px;
-          border-radius: 20px;
+          width: 100px;
+          border-radius: 30px;
         }
         &__btn:hover {
           background: #ee3e52;
@@ -142,9 +142,13 @@
                     }
                   }
                   .user-name {
+                    padding-top: 10px;
                     padding-left: 20px;
                     span {
                       font-size: 30px;
+                    }
+                    .post-date {
+                      font-size: 24px;
                     }
                   }
                 }
