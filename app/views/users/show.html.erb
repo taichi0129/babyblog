@@ -1,3 +1,65 @@
-<h1 class="main-contents__user">
+<%# <h1 class="main-contents__user">
   <%= render 'relationships/follow_btn', user: @user %> 
-</h1>
+<%# </h1> %>
+
+<div class="users-wrapper">
+  <div class="user-wrapper">
+    <%= render "side-contents" %>
+
+    <div class="user-contents">
+      <div class="user-image">
+        <ul>
+          <li>
+            <% if @user.image? %>
+              <div class="user-image">
+                <%= image_tag(@user.image.to_s) %>
+              </div>
+            <% else %>
+              <%= render "/layouts/default_img" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <table class="user-info">
+        <tr>ユーザー情報
+          <th>ユーザー名</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>ニックネーム</th>
+          <td><%= @user.nickname %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= @user.email %></td>
+        </tr>
+      </table>
+
+      <% @babies.each do |baby| %>
+        <table class="user-info">
+          <tr>マイベビー情報
+            <th>ベビーの名前</th>
+            <td><%= baby.name %></td>
+          </tr>
+          <tr>
+            <th>性別</th>
+            <td><%= baby.sex %></td>
+          </tr>
+          <tr>
+            <th>誕生日</th>
+            <td><%= baby.birthday %></td>
+          </tr>
+          <tr>
+            <th>身長</th>
+            <td>80cm</td>
+          </tr>
+          <tr>
+            <th>体重</th>
+            <td>8kg</td>
+          </tr>
+        </table>
+      <% end %>
+
+    </div>
+  </div>
+</div>

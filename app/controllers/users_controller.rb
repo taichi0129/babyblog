@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @babies = current_user.babies.all
   end
 
   def edit
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    redirect_to users_path(@user.id)
+    redirect_to user_path(@user.id)
   end
 
   def destroy
