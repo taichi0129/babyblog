@@ -5,8 +5,10 @@ $(function() {
     var fileReader = new FileReader();
     fileReader.onloadend = function() {
       var src = fileReader.result;
-      var html = `<img src="${src}" class="image-data">`;
-      $('.preview-image').after(html);
+      var html = `<div class="image-form">
+                    <img src="${src}" class="image-data">
+                  </div>`;
+      $('.hidden-image').after(html);
     }
     fileReader.readAsDataURL(file);
     if ($('.preview-image').length != 0) {

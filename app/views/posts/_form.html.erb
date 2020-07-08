@@ -8,14 +8,14 @@
   <div class="post-image">
     <h2>写真を貼り付けましょう</h2>
     <div class="image-form">
+      <div class="hidden-image">
+        <%= f.file_field :image, class: "hidden-file" %>
+      </div>
       <% if @post.image.present? %>
         <div class="preview-image">
           <%= image_tag @post.image.to_s, class: "image-data" %>
         </div>
       <% end %>
-      <div class="hidden-image">
-        <%= f.file_field :image, class: "hidden-file" %>
-      </div>
     </div>
   </div>
   <h2 class="post-text">コメント</h2>

@@ -16,7 +16,7 @@
       </h1>
       <div class="header-sub">
         <% if user_signed_in? %>
-          <%= link_to "新規投稿", new_post_path, class: "new-menu" %>
+          <%= link_to "新規投稿", new_post_path, class: "new-menu", data: { "turbolinks":false } %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-in" %>
           <% if current_user.image? %>
             <div class="user-image">

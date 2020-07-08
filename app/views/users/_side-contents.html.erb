@@ -1,7 +1,7 @@
 <div class="side-contents">
   <ul>
     <li>
-      <%= link_to new_post_path do %>
+      <%= link_to new_post_path, data: { "turbolinks":false } do %>
         記事を投稿する
         <i class="fas fa-arrow-right"></i>
       <% end %>
