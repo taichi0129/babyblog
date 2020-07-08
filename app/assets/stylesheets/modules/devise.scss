@@ -70,6 +70,17 @@
     outline: none;
   }
 
+  .field {
+    padding-left: 40px;
+    .remember_me_box {
+      transform: scale(2.5);
+    }
+    .remember_me_label {
+      padding-left: 20px;
+      font-size: 30px;
+    }
+  }
+
   .button-panel {
     margin: 2em 0 0;
     width: 100%;
@@ -162,6 +173,17 @@
     border-bottom: 2px solid #c0c0c0;
     padding: 0;
     outline: none;
+  }
+
+  .field {
+    padding-left: 10px;
+    .remember_me_box {
+      transform: scale(1);
+    }
+    .remember_me_label {
+      padding-left: 10px;
+      font-size: 16px;
+    }
   }
 
   .button-panel {

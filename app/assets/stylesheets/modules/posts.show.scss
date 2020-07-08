@@ -36,11 +36,11 @@
   .like {
     display: flex;
     .element {
-      font-size: 30px;
+      font-size: 36px;
     }
     .count {
       font-size: 20px;
-      padding: 11px 0 0 8px;
+      padding: 20px 0 0 8px;
     }
   }
 
@@ -153,9 +153,18 @@
       .comment_submit:hover {
         background: #ee3e52;
       }
-      h4 {
-        font-size: 30px;
-        padding-bottom: 20px;
+      .comments {
+        text-align: center;
+        p {
+          font-size: 26px;
+          padding-bottom: 20px;
+          letter-spacing: 0.05em;
+        }
+        h4 {
+          font-size: 36px;
+          padding-bottom: 20px;
+          letter-spacing: 0.05em;
+        }
       }
     }
   }
@@ -185,10 +194,12 @@
 
   .unlike_btn {
     color: #808080;
+    font-size: 36px;
   }
   
   .like_btn {
     color: #e54747;
+    font-size: 36px;
   }
 }
 
@@ -230,11 +241,11 @@
   .like {
     display: flex;
     .element {
-      font-size: 20px;
+      font-size: 24px;
     }
     .count {
       font-size: 12px;
-      padding: 10px 0 0 4px;
+      padding: 15px 0 0 4px;
     }
   }
 
@@ -348,9 +359,18 @@
       .comment_submit:hover {
         background: #ee3e52;
       }
-      h4 {
-        font-size: 20px;
-        padding-bottom: 20px;
+      .comments {
+        text-align: center;
+        p {
+          font-size: 20px;
+          padding-bottom: 20px;
+          letter-spacing: 0.05em;
+        }
+        h4 {
+          font-size: 20px;
+          padding-bottom: 20px;
+          letter-spacing: 0.05em;
+        }
       }
     }
   }
@@ -380,9 +400,11 @@
 
   .unlike_btn {
     color: #808080;
+    font-size: 24px;
   }
   
   .like_btn {
     color: #e54747;
+    font-size: 24px;
   }
 }

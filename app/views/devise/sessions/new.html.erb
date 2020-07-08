@@ -12,6 +12,13 @@
         <%= f.password_field :password, autofocus: true, autocomplete: "current-password", required: "required", placeholder: "パスワードを入力" %>
       </div>
 
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me, class: "remember_me_box" %>
+          <%= f.label :remember_me, "パスワードを記憶させる", class: "remember_me_label" %>
+        </div>
+      <% end %>
+
       <div class="button-panel">
         <%= f.submit "ログイン", class: "devise_btn"%>
       </div>
