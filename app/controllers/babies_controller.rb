@@ -14,6 +14,6 @@ class BabiesController < ApplicationController
 
   private
   def baby_params
-    params.require(:baby).permit(:name, :sex, :image, :birthday).merge(user_id: current_user.id)
+    params.require(:baby).permit(:name, :sex, :image, :birthday, :first_weight, :first_height).merge(user_id: current_user.id)
   end
 end

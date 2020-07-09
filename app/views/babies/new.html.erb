@@ -34,6 +34,14 @@
           <th>誕生日</th>
           <td><%= f.date_field :birthday, autofocus: true, required: "required", class: "user-edit" %></td>
         </tr>
+        <tr>
+          <th>生まれた時の体重(g)</th>
+          <td><%= f.number_field :first_weight, autofocus: true, required: "required", class: "user-edit" %></td>
+        </tr>
+        <tr>
+          <th>生まれた時の身長(cm)</th>
+          <td><%= f.number_field :first_height, autofocus: true, required: "required", class: "user-edit" %></td>
+        </tr>
       </table>
       <div class="user-update">
         <%= f.submit "マイベビーの登録", class: "user-update__btn" %>
