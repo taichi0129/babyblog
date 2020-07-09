@@ -12,7 +12,9 @@
   <body>
     <header class="header">
       <h1 class="header-title">
-      <%= link_to "べびぶろぐ", "/", class: "title-name" %>
+      <%= link_to "/", class: "title-name" do %>
+        <%= image_tag asset_path('title.png') %>
+      <% end %>
       </h1>
       <div class="header-sub">
         <% if user_signed_in? %>
