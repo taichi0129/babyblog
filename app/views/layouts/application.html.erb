@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <h1 class="header-title">
-      <%= link_to "/", class: "title-name" do %>
+      <%= link_to "/", class: "title-name", data: { "turbolinks":false } do %>
         <%= image_tag asset_path('title.png') %>
       <% end %>
       </h1>
