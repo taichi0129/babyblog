@@ -34,6 +34,7 @@
   }
 
   .like {
+    padding-top: 15px;
     display: flex;
     .element {
       font-size: 36px;
@@ -136,6 +137,7 @@
         font-size: 36px;
         padding: 5px;
         width: 100%;
+        border: 1px solid #777676;
       }
       .comment_submit {
         background: #f16272;
@@ -242,6 +244,7 @@
   }
 
   .like {
+    padding-top: 15px;
     display: flex;
     .element {
       font-size: 24px;
@@ -342,9 +345,10 @@
     .post-comment {
       padding: 20px;
       .comment-field {
-        font-size: 14px;
+        font-size: 20px;
         padding: 5px;
         width: 100%;
+        border: 1px solid #777676;
       }
       .comment_submit {
         background: #f16272;
