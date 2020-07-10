@@ -31,6 +31,9 @@
                   <div class="user-name">
                     <span>投稿者：<%= post.user.nickname %></span><br>
                     <span class="post-date">投稿日時：<%= post.created_at.to_s(:datetime_jp) %></span>
+                    <i class="far fa-clock">
+                      <span class="date-info"><%= time_ago_in_words(post.created_at) + "前" %></span>
+                    </i>
                   </div>
                 </div>
                 <div class="post-title">
