@@ -9,7 +9,11 @@
     <h2>写真を貼り付けましょう</h2>
     <div class="image-form">
       <div class="hidden-image">
-        <%= f.file_field :image, class: "hidden-file" %>
+        <%= f.file_field :image, class: "hidden-file", id: "img-file" %>
+        <label class="image-camera" for="img-file">
+          <i class="fas fa-camera"></i>
+          <p>ファイルをアップロード</p>
+        </label>
       </div>
       <% if @post.image.present? %>
         <div class="preview-image">
