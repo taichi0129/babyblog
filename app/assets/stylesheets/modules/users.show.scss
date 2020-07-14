@@ -145,3 +145,24 @@
   }
 }
 
+.baby-edit {
+  padding-top: 10px;
+  a {
+    background: #7a7576;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    // height: 50px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    // width: 100%;
+    padding: 8px 15px;
+    border-radius: 10px;
+  }
+  a:hover {
+    background: #353434;
+  }
+}

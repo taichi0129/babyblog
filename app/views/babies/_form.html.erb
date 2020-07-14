@@ -1,0 +1,43 @@
+<div class="user-info">
+  <% if @baby.image? %>
+    <div class="user-image">
+      <%= image_tag(@baby.image.to_s) %>
+    </div>
+  <% else %>
+    <div class="user-image">
+      <%= image_tag asset_path('default_baby.png') %>
+    </div>
+  <% end %>
+  <%= f.file_field :image, class: "hidden_field" %>
+</div>
+<table class="user-info">
+  <tr>
+    <th>お名前</th>
+    <td><%= f.text_field :name, autofocus: true, autocomplete: "name", required: "required", class: "user-edit" %></td>
+  </tr>
+  <tr>
+    <th>性別</th>
+    <td>
+      <%= f.radio_button :sex, "男の子" %>
+      <%= f.label :sex, "男の子" %>
+      /
+      <%= f.radio_button :sex, "女の子" %>
+      <%= f.label :sex, "女の子" %>
+    </td>
+  </tr>
+  <tr>
+    <th>誕生日</th>
+    <td><%= f.date_field :birthday, autofocus: true, required: "required", class: "user-edit" %></td>
+  </tr>
+  <tr>
+    <th>生まれた時の体重(g)</th>
+    <td><%= f.number_field :first_weight, autofocus: true, required: "required", class: "user-edit" %></td>
+  </tr>
+  <tr>
+    <th>生まれた時の身長(cm)</th>
+    <td><%= f.number_field :first_height, autofocus: true, required: "required", class: "user-edit" %></td>
+  </tr>
+</table>
+<div class="user-update">
+  <%= f.submit "マイベビーの登録", class: "user-update__btn" %>
+</div>
