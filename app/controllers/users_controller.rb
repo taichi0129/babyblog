@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @babies = current_user.babies.all
+    @babies = @user.babies
   end
 
   def edit
@@ -36,6 +36,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(current_user.id)
+    @user = User.find(params[:id])
   end
 end

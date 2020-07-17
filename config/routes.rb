@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :likes, only: :index
   resources :babies
   resources :users
   resources :relationships, only: [:create, :destroy]

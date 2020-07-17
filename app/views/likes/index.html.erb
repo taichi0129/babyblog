@@ -1,0 +1,48 @@
+<div id="home"><a href="/"></a></div>
+
+<div class="wrapper">
+  <div class="main-contents">
+
+    <div class="content-main">
+
+      <div class="content-main__box">
+        <h1>いいね！した記事</h1>
+
+        <div class="content-main__box__post">
+          <% @likes.each do |like| %>
+            <div class="content-main__box__post__box">
+              <div class="content-main__box__post__box--img">
+                <%= link_to image_tag(like.post.image.to_s), post_path(like.post.id) %>
+              </div>
+              <div class="content-main__box__post__box--info">
+                <div class="user-info">
+                  <% if like.post.user.image? %>
+                    <div class="user-image">
+                      <%= image_tag(like.post.user.image.to_s) %>
+                    </div>
+                  <% else %>
+                    <%= render "/layouts/default_img" %>
+                  <% end %>
+                  <div class="user-name">
+                    <span>投稿者：<%= like.post.user.nickname %></span><br>
+                    <span class="post-date">投稿日時：<%= like.post.created_at.to_s(:datetime_jp) %></span>
+                    <i class="far fa-clock">
+                      <span class="date-info"><%= time_ago_in_words(like.post.created_at) + "前" %></span>
+                    </i>
+                  </div>
+                </div>
+                <div class="post-title">
+                  <%= like.post.title %>
+                </div>
+                <div class="post-text">
+                  <%= truncate(like.post.text, length:40) %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

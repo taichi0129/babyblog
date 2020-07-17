@@ -1,5 +1,9 @@
 class LikesController < ApplicationController
-  before_action :set_post
+  before_action :set_post, only: [:create, :destroy]
+
+  def index
+    @likes = Like.includes(:user).order(created_at: :asc)
+  end
 
   def create
     @like = Like.create(user_id: current_user.id, post_id: @post.id)
