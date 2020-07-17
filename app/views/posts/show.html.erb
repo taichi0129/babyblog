@@ -24,10 +24,12 @@
       <h1 class="main-contents__user">
         <% if @post.user.image? %>
           <div class="user-image">
-            <%= image_tag(@post.user.image.to_s) %>
+            <%= link_to image_tag(@post.user.image.to_s), user_path(@post.user_id) %>
           </div>
         <% else %>
-          <%= render "/layouts/default_img" %>
+          <%= link_to user_path(@post.user_id) do %>
+            <%= render "/layouts/default_img" %>
+          <% end %>
         <% end %>
         <div class="user-name">
           <span>投稿者：<%= @post.user.nickname %></span>
@@ -65,10 +67,12 @@
               <div class="user-info">
                 <% if comment.user.image? %>
                   <div class="user-image">
-                    <%= image_tag(comment.user.image.to_s) %>
+                    <%= link_to image_tag(comment.user.image.to_s), user_path(comment.user_id) %>
                   </div>
                 <% else %>
-                  <%= render "/layouts/default_img" %>
+                  <%=link_to user_path(comment.user_id) do %>
+                    <%= render "/layouts/default_img" %>
+                  <% end %>
                 <% end %>
                 <div class="user-name">
                   <%= comment.user.nickname %>

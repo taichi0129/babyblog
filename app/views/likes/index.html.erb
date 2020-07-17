@@ -18,10 +18,12 @@
                 <div class="user-info">
                   <% if like.post.user.image? %>
                     <div class="user-image">
-                      <%= image_tag(like.post.user.image.to_s) %>
+                      <%= link_to image_tag(like.post.user.image.to_s), user_path(like.post.user_id) %>
                     </div>
                   <% else %>
-                    <%= render "/layouts/default_img" %>
+                    <%= link_to user_path(like.post.user_id) do %>
+                      <%= render "/layouts/default_img" %>
+                    <% end %>
                   <% end %>
                   <div class="user-name">
                     <span>投稿者：<%= like.post.user.nickname %></span><br>
