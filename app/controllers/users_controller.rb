@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :followings, :followers]
 
   def index
     @user = User.find(current_user.id)
@@ -28,6 +28,16 @@ class UsersController < ApplicationController
     else
       render :index
     end
+  end
+
+  def followings
+    @users = @user.followings
+    render 'show_followings'
+  end
+
+  def followers
+    @users = @user.followers
+    render 'show_followers'
   end
 
   private
