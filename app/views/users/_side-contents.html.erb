@@ -13,13 +13,13 @@
       <% end %>
     </li>
     <li>
-      <%= link_to "#" do %>
+      <%= link_to followings_user_path(current_user) do %>
         フォローリスト
         <i class="fas fa-arrow-right"></i>
       <% end %>
     </li>
     <li>
-      <%= link_to "#" do %>
+      <%= link_to followers_user_path(current_user) do %>
         フォロワーリスト
         <i class="fas fa-arrow-right"></i>
       <% end %>
@@ -37,13 +37,13 @@
       <% end %>
     </li>
     <li>
-    <%= link_to edit_user_path(@user.id), data: { "turbolinks":false } do %>
+    <%= link_to edit_user_path(current_user.id), data: { "turbolinks":false } do %>
         ユーザー情報の変更
         <i class="fas fa-arrow-right"></i>
       <% end %>
     </li>
     <li>
-    <%= link_to user_path(@user.id), method: :delete do %>
+    <%= link_to user_path(current_user.id), method: :delete do %>
         べびぶろぐ退会
         <i class="fas fa-arrow-right"></i>
       <% end %>

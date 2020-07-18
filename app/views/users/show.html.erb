@@ -39,9 +39,11 @@
       <% @babies.each do |baby| %>
         <table class="user-info">
           <div>マイベビー情報
-            <div class="baby-edit">
-              <%= link_to "登録情報を変更する", edit_baby_path(baby.id) %>
-            </div>
+            <% if @user.id == current_user.id %>
+              <div class="baby-edit">
+                <%= link_to "登録情報を変更する", edit_baby_path(baby.id) %>
+              </div>
+            <% end %>
             <% if baby.image? %>
               <div class="user-image">
                 <%= image_tag(baby.image.to_s) %>
