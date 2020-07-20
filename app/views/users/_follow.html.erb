@@ -1,0 +1,28 @@
+<% @users.each do |user| %>
+  <div class="user-info">
+    <% if user.image? %>
+      <div class="user-image">
+        <%= link_to image_tag(user.image.to_s), user_path(user.id) %>
+      </div>
+    <% else %>
+      <%= link_to user_path(user.id) do %>
+        <%= render "/layouts/default_img" %>
+      <% end %>
+    <% end %>
+    <h1 class="main-contents__user">
+      <%= render 'relationships/follow_btn', user: user %> 
+      <%= link_to "投稿記事を見る", "#", class: "follow-posts" %>
+    </h1>
+    <table class="user-info">
+      <tr>
+        <th>ユーザー名</th>
+        <td><%= user.name %></td>
+      </tr>
+      <tr>
+        <th>ニックネーム</th>
+        <td><%= user.nickname %></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+<% end %>

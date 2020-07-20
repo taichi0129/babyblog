@@ -79,40 +79,7 @@
       }
       .main-contents__user {
         text-align: center;
-        .btn-primary {
-          background: #7a7576;
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          font-size: 16px;
-          letter-spacing: 0.05em;
-          text-align: center;
-          text-transform: uppercase;
-          transition: background 0.3s ease-in-out;
-          padding: 8px 15px;
-          border-radius: 10px;
-          width: 150px;
-        }
-        .btn-primary:hover {
-          background: #353434;
-        }
-        .btn-danger {
-          background: #ee2049;
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          font-size: 16px;
-          letter-spacing: 0.05em;
-          text-align: center;
-          text-transform: uppercase;
-          transition: background 0.3s ease-in-out;
-          padding: 8px 15px;
-          border-radius: 10px;
-          width: 150px;
-        }
-        .btn-danger:hover {
-          background: #e71919;
-        }
+        @include relationship
       }
       .user-info {
         display: block;

@@ -47,6 +47,11 @@
         padding-left: 350px;
         // display: none;
       }
+      .main-contents__user {
+        text-align: center;
+        @include relationship;
+        padding-top: 20px;
+      }
     }
     .user-update {
       padding-top: 10px;
@@ -66,6 +71,11 @@
       &__btn:hover {
         background: #ee3e52;
       }
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 10px;
     }
   }
 }

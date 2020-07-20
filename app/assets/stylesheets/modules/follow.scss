@@ -1,0 +1,26 @@
+.follow-contents {
+  padding: 0 30px;
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .follow-content {
+    @include box-shadow;
+    margin-bottom: 20px;
+    display: flex;
+    .follow-img-box {
+      width: 200px;
+      height: 200px;
+      border-right: 1px solid #b4b0b0;
+      img {
+        width: 200px;
+        height: 200px;
+        @include user-img;
+      }
+    }
+  }
+  .follow-content:hover {
+    box-shadow: 0 2px 12px 10px rgba(0,0,0,.3);
+  }
+}

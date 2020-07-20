@@ -1,5 +1,11 @@
-<div>
-  <% @users.each do |user| %>
-    <%= user.name %>
-  <% end %>
+<div id="home"><a href="/"></a></div>
+<div class="users-wrapper">
+  <div class="baby-wrapper">
+  
+    <div class="user-contents">
+      <h1>フォローされているユーザーの一覧</h1>
+        <%= render "follow" %>
+      </h1>
+    </div>
+  </div>
 </div>
