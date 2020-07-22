@@ -11,7 +11,7 @@
     <% end %>
     <h1 class="main-contents__user">
       <%= render 'relationships/follow_btn', user: user %> 
-      <%= link_to "投稿記事を見る", "#", class: "follow-posts" %>
+      <%= link_to "投稿記事を見る", posts_path(user.id), class: "follow-posts" %>
     </h1>
     <table class="user-info">
       <tr>
